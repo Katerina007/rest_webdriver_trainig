@@ -15,7 +15,6 @@ import org.testng.annotations.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.contentOf;
-import static org.assertj.core.api.Assertions.not;
 import static org.assertj.core.api.Assertions.offset;
 import static org.assertj.core.api.Assertions.tuple;
 
@@ -98,8 +97,8 @@ public class AsrtAssertJ extends BaseTest {
 
     @Test(description = "Using file assertions")
     public void testExtras2() {
-//        File xFile = new File(Paths.get("src", "test", "resources", "assertions", "Truth.txt").toAbsolutePath().toString());
-        File xFile = new File("src/test/resources/assertions/Truth.txt");
+        File xFile = new File(Paths.get("src", "test", "resources", "assertions", "Truth.txt").toAbsolutePath().toString());
+//        File xFile = new File("src/test/resources/assertions/Truth.txt");
 
         // classic file assertions
         assertThat(xFile).exists().isFile().isAbsolute();
